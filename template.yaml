@@ -1,0 +1,82 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  anonymiser
+
+  SAM Template for anonymiser
+
+Resources:
+  S3BucketWithPii:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Join ["-", [ !Ref AWS::StackName, "bucket-with-pii"]]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+
+  S3BucketAccessPoint:
+    Type: AWS::S3::AccessPoint
+    Properties: 
+      Bucket: !Ref S3BucketWithPii
+      Name: bucket-with-pii-access-point
+
+  S3LambdaAccessPoint:
+    Type: AWS::S3ObjectLambda::AccessPoint
+    Properties: 
+      Name: bucket-with-pii-lambda-access-point
+      ObjectLambdaConfiguration: 
+        SupportingAccessPoint: !Join
+          - ''
+          - - 'arn:'
+            - !Ref AWS::Partition
+            - ':s3:'
+            - !Ref AWS::Region
+            - ':'
+            - !Ref AWS::AccountId
+            - ':accesspoint/'
+            - !Ref S3BucketAccessPoint
+        TransformationConfigurations: 
+          - Actions: 
+            - GetObject
+            ContentTransformation:
+              AwsLambda: 
+                FunctionArn: !GetAtt AnonymiserFunction.Arn
+
+  AnonymiserFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: function/
+      Handler: anonymizer.handler
+      Runtime: python3.8
+      Tracing: Active
+      Timeout: 60
+      MemorySize: 256
+      Environment:
+        Variables:
+          LOG_LEVEL: DEBUG
+          POWERTOOLS_SERVICE_NAME: anonymiser
+      Policies:
+      - Statement:
+        - Sid: WriteS3GetObjectResponse
+          Effect: Allow
+          Action:
+          - s3-object-lambda:WriteGetObjectResponse
+          Resource: '*'
+
+  AnonymiserFunctionLogGroup:
+    Type: "AWS::Logs::LogGroup"
+    Properties: 
+      RetentionInDays: 5
+      LogGroupName: !Join ["", ["/aws/lambda/", !Ref AnonymiserFunction]]
+
+Outputs:
+  AnonymiserFunction:
+    Description: "Anonymiser Lambda Function ARN"
+    Value: !GetAtt AnonymiserFunction.Arn
+  AnonymiserFunctionIamRole:
+    Description: "Implicit IAM Role created for Anonymiser function"
+    Value: !GetAtt AnonymiserFunctionRole.Arn
+  S3LambdaAccessPointArn:
+    Description: "ARN for the S3 Lambda Access Point"
+    Value: !GetAtt S3LambdaAccessPoint.Arn

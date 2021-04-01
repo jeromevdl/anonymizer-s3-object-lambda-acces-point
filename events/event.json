@@ -1,0 +1,42 @@
+{
+  "xAmzRequestId": "8e288686-af80-4495-896c-e464818cc5e9",
+  "getObjectContext": {
+    "inputS3Url": "https://anonymized-access-012345678912.s3-accesspoint.eu-central-1.amazonaws.com/patients.csv?X-Amz-Security-Token=FwoGZXIvYXdzEGsaDAHhmPvTKHGXyMMY5yKwAwIRA7iqI7bZ0ql%2BaDqyvy%2F2XMhnOkWR33Y5KOIDIEKb6%2FZc6DonWgvhFQ3S8T6pmnaDk0VqTe7%2B0hDeFyA2u3CtgW1KRAcSSD%2BrZ51QBRNrk4QrLMf3%2FQpxV4cwTGXxFCU0bPuTCDNfobZaylUmxh87rJelyq7MpRQQoMFEczyuayNIL%2FNuNbcFDlEDtEGqFwMhFitDmV8fH9v7qEq69wX5VGggk4rA2jBpXty%2F9WDiXlx7lk2WvcdYV89%2BGH8F5JAtMjGgq4f652jD0kYtRTpxr%2Bd6JzMyGnaF%2FhLlKkr83Nz3E7Yl8rKaTvKyzzEh1VRgtkBMARatMhHY1lY1mG0OOzNAx4J%2B3wS9zQCZzjmDjyKS1QikvlVYta%2FmFFYCA2SzCdqpJxM9sk85exMpq3VSl0FR9AfiEZ4B%2FSC1P1IHEza6sIL5PgI06HkcbG6B1b64RWLVKKm86NF527SEiyqIFXCftNEb%2F4vHqtsHMNzjv%2FEgrGsgZ1emaw3aQzsj95rRxcxAgXyce5rLBrxUVMpYU1JPldVzbyiEedFpE36BNbGLEfU6cakFtRMux6GD3SjB4JWDBjKlAeivAtiw%2FB%2ByFS3bS0mBICRjKCFhusrnscUbewUPQEAuRJyMRHhyyA8rzSXcKkt0TIPC08fv1MgEtE1TKx7RnsjPTSngsf6mUGyd9ywirB0t%2BfCdG7EuDGIVWyeH2nKQalf40kIR4lcJTNyI%2BF89AbqLWljR9OV3Y7OfXFvA7RGFCd0jICddodJYaJ8YYM6%2F4cVKEWBe2cPd4TOba4tDBD6XHu0G3w%3D%3D%7CNTQuMjM5LjYuMTc3&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210401T092728Z&X-Amz-SignedHeaders=host&X-Amz-Expires=60&X-Amz-Credential=ASIAIZQKCWQ7TJK3SBEA%2F20210401%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=f21ad1883cd8f5b6f23077a951d37ca1a23a95ec1108a7ef6058dac3862ef594",
+    "outputRoute": "io-cell001",
+    "outputToken": "AgV4rmeGz7BZHy+hN2HQJ52pMw3U4y78MGrx733hWgyJLf8AXwABABVhd3MtY3J5cHRvLXB1YmxpYy1rZXkAREFqYjc3MXlQVzd3RnNUQll3RHRjelF5Yk9HR01RNWNkMXRVMjdRdWRla3VLTURIeUJQeVAySUpwdFZLdWJlbkdQdz09AAEAB2F3cy1rbXMATmFybjphd3M6a21zOmV1LWNlbnRyYWwtMTo1NjYyNTQyOTY1MDE6a2V5L2Q2NzU5NDNhLTQzYWUtNDNjMS1hOTdlLTE4MDcwMzVjYTBjYwC4AQIBAHj0Lw+CJrSO+04CV1Dem4DpATsSMUAZAowRNdNVGi87lQGz1j22+rySgTTbME7wDqLwAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMzBr+ghmJc5fbwtniAgEQgDv9eKE6v+ZWQitYu9ap8FiBDTcvMoVcxBIn5i1uCce3l348iQ3ngEu+jGcj5qq21OFROi6EyoUsVrNB5QIAABAAtwljTKILW0vRRiuiEXg8eRSfOlWOiQ177xtGPlmq1iPsAcRPCnqu0U5Y2+UNgL3d/////wAAAAEAAAAAAAAAAAAAAAEAAAD0hFVuDtggkPXPn6oYdOZFEjrQucusS0CPFFk2aSirsTvUap5fL291JJ9G2Hg7CC3zH7OAyJtNtB51vhWb0YwOPP4VL+RFwxCievqWaR4cXNT3dfIPoktRkNQxL5ZQi8RtJ6P9hFX2mV6hvIsL850L329t+W7tD9UHQ1KUybXrth9MUUcZpOWEQf4LnajyuhaJwq+XjGrHs4UQlG5FKbABWCF3b5IantRFvzieAb6YaSCV0CR8MDBxna9NqSAAMkpWNsacypWiSY+YPn12H/ZzvIn8k18wSVkb3amcuGxNAyqzEqkQrdy0z6+Ue88EzxI713q2Wohacx3S4QbTIWZr8MMLu0kAZzBlAjEAhG9ZFq+9lUzEZmHHhqmxl9YhTeh84reNs7kXCOCuMvlicfSUQiOoouvIAlQe68O0AjB1XVA/edQ8qlGTMDtcbar5xN238W9mx0LoN9MLQlKP9+IIFI9mtBlZtT1e6E3iKb0="
+  },
+  "configuration": {
+    "accessPointArn": "arn:aws:s3-object-lambda:eu-central-1:012345678912:accesspoint/anonymize-lambda-accesspoint",
+    "supportingAccessPointArn": "arn:aws:s3:eu-central-1:012345678912:accesspoint/anonymized-access",
+    "payload": ""
+  },
+  "userRequest": {
+    "url": "https://anonymize-lambda-accesspoint-012345678912.s3-object-lambda.eu-central-1.amazonaws.com/patients.csv",
+    "headers": {
+      "Host": "anonymize-lambda-accesspoint-012345678912.s3-object-lambda.eu-central-1.amazonaws.com",
+      "Accept-Encoding": "identity",
+      "X-Amz-Content-SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "userIdentity": {
+    "type": "AssumedRole",
+    "principalId": "AROAIFU457DVZ5L2J53F2:jvdl",
+    "arn": "arn:aws:sts::012345678912:assumed-role/Admin/jvdl",
+    "accountId": "012345678912",
+    "accessKeyId": "ASIA2IQD3JHYMOVBEESO",
+    "sessionContext": {
+      "attributes": {
+        "mfaAuthenticated": "false",
+        "creationDate": "Thu Apr 01 07:03:29 UTC 2021"
+      },
+      "sessionIssuer": {
+        "type": "Role",
+        "principalId": "AROAIFU457DVZ5L2J53F2",
+        "arn": "arn:aws:iam::012345678912:role/Admin",
+        "accountId": "012345678912",
+        "userName": "Admin"
+      }
+    }
+  },
+  "protocolVersion": "1.00"
+}

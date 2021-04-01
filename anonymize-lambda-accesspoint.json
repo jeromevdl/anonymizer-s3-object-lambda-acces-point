@@ -1,0 +1,11 @@
+{
+    "SupportingAccessPoint" : "arn:aws:s3:eu-central-1:012345678912:accesspoint/anonymized-access",
+    "TransformationConfigurations": [{
+        "Actions" : ["GetObject"],
+        "ContentTransformation" : {
+            "AwsLambda": {
+                "FunctionArn" : "arn:aws:lambda:eu-central-1:012345678912:function:data-anonymizer-AnonymiserFunction-RTHQH8LO8WN9"
+            }
+        }
+    }]
+}

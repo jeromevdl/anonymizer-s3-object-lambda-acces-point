@@ -1,0 +1,4 @@
+Faker
+requests
+boto3
+aws-lambda-powertools
